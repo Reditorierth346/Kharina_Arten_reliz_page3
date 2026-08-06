@@ -1,0 +1,444 @@
+:root {
+   --primary-color: #C0342E; /*#3b319c*/
+   --accent-color:#741330; 
+   --text-color: #8D1E2F;
+   --bg-color: #A6292F;
+}
+
+
+* {
+   box-sizing: border-box; /* враховує padding і border у ширині/висоті */
+   margin: 0;
+   padding: 0;
+}
+
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+   line-height: 1.6;
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;/* сторінка мінімум на всю висоту екрану */
+}
+.navbar {
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    padding: 16px 5%;
+  
+}   
+.nav-pivo {
+    background-color: var(--primary-color);
+    color: white;
+    top: 0;
+  position: sticky;
+    z-index: 100;
+}
+.logo{
+   font-size: 24px;
+    font-weight:  bold;
+    font-family: 'Geneva';
+    color: var(--accent-color);
+    display: flex;
+    gap: 10px;
+}
+.NFS-logo{
+   width: 50px;
+   height: 35px;
+}
+.png{
+    width: 550px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.proy{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.video-conte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    padding: 8px;
+    border: none;
+}
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius:2px ;
+}
+/* Перша лінія */
+.hamburger.active span:nth-child(1) {
+   transform: rotate(45deg) translate(10px, 10px);
+   /*
+   rotate(45deg) — повертає лінію на 45°
+   translate(10px, 10px) — зміщує вправо і вниз
+   в результаті це стає верхньою частиною "Х"
+   */
+}
+
+
+/* Друга (середня) лінія */
+.hamburger.active span:nth-child(2) {
+   opacity: 0;
+   /*
+   робимо її невидимою
+   щоб залишилось тільки дві лінії для "Х"
+   */
+}
+
+
+/* Третя лінія */
+.hamburger.active span:nth-child(3) {
+   transform: rotate(-45deg) translate(10px, -10px);
+   /*
+   rotate(-45deg) — повертає в інший бік
+   translate(10px, -10px) — зміщує вправо і вгору
+   формує нижню частину "Х"
+   */
+}
+
+
+.nav-menu {
+   display: flex;
+   gap: 30px;
+   align-items: flex-end;
+}
+
+
+.nav-menu a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s;
+}
+
+
+.nav-menu a:hover, .nav-menu a.active {
+   color: var(--accent-color);
+}
+.parallax {
+   background-image: url(need-for-speed-most-wanted-2005.jpg);
+   z-index: 24;
+   height: 100vh;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+.parallax2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.parallax2 div{
+    max-width: 800px;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+   
+}
+
+
+
+.hero-content h1 {
+   font-size: 56px;
+   color: #fff;
+   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+   margin-bottom: 8px;
+}
+
+
+
+
+.btn {
+   padding: 12px 30px;
+   background-color: var(--accent-color);
+   color: var(--primary-color);
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 4px;
+   transition: background 0.3s;
+   cursor: pointer;
+}
+
+.ybt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn:hover {
+   background-color: #fff;
+}
+
+.content-block {
+   max-width: 900px;/* елемент НЕ стане ширшим за 900px */
+   margin: 40px auto;
+   padding: 0 20px;
+   }
+
+footer {
+   background-color: var(--primary-color);
+   color: #fff;
+   text-align: center;
+   padding: 20px 0;
+  
+}
+
+
+
+
+.dots {
+   flex: 1;
+   border-bottom: 2px dotted #ccc;
+   margin: 0 10px;
+   align-self: center;
+}
+
+/* --- Цікаві факти --- */
+.fakts{
+    padding: 80px 20px;
+    color: #fff;
+    background-image: linear-gradient(247deg, rgb(167, 167, 167),rgb(27, 27, 27)),linear-gradient(202deg, rgb(116, 19, 48) 0%, rgb(116, 19, 48) 69%,rgb(141, 30, 47) 69%, rgb(141, 30, 47) 75%,rgb(166, 41, 47) 75%, rgb(166, 41, 47) 81%,rgb(192, 52, 46) 81%, rgb(192, 52, 46) 85%,rgb(217, 63, 46) 85%, rgb(217, 63, 46) 91%,rgb(242, 74, 45) 91%, rgb(242, 74, 45) 100%),linear-gradient(292deg, rgb(116, 19, 48) 0%, rgb(116, 19, 48) 69%,rgb(141, 30, 47) 69%, rgb(141, 30, 47) 75%,rgb(166, 41, 47) 75%, rgb(166, 41, 47) 81%,rgb(192, 52, 46) 81%, rgb(192, 52, 46) 85%,rgb(217, 63, 46) 85%, rgb(217, 63, 46) 91%,rgb(242, 74, 45) 91%, rgb(242, 74, 45) 100%); background-blend-mode:overlay,overlay,normal;
+}
+
+.fakts-container{
+  display: flex;
+  justify-content: space-around;
+   
+}
+
+.faktys{
+ 
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 42px;
+    margin-bottom: 25px;
+}
+
+
+.fakts h2{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+.fakts ol{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+}
+.fakts li{
+    background: rgba(0, 0, 0, 0.6) ;
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border-left: 5px solid #ff007f;
+    line-height: 1.6;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+.fakts li:hover {
+    transform:scale(1.02);
+   background: rgba(0,0,0,0.7);
+}
+.fakts li b{
+    display: block;
+    font-size: 18px;
+    color: #ffaa00;
+    margin-bottom: 8px;
+}
+/* --- Серія ігор --- */
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;
+    justify-content: center;
+  gap:30px;
+max-width: 1300px;
+margin: 0 auto 80px auto;
+padding: 0 20px;
+
+}
+
+.gane-card{
+    width: 400px;
+background:#1a162b;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+transition: transform 0.3s;
+
+}
+
+.game-card:hover{
+    transform:translateY(-5px );
+}
+
+.game-card img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.game-card h2{
+    font-size: 20px;
+    padding: 15px 20px 0 20px;
+margin: 0;
+color: #00dbde;
+
+}
+
+.game-card p{
+    font-size: 14px;
+    padding: 10px 20px 20px 20px;
+    line-height: 1.5;
+    color: #aaa;
+}
+
+/* --- Адаптивність (Mobile) --- */
+@media (max-width: 600px) {
+   .navbar {
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .parallax{ 
+  background-image:url('nfs-mobile.jpg') ;
+    }
+
+   .hamburger {
+       display: flex;
+       order: 2;
+   }
+
+
+
+
+   .logo {
+       order: 1;
+   }
+
+
+   .nav-menu {
+       order: 3;
+       position: fixed;
+       left: -100%;
+       top: 60px;
+       flex-direction: column;
+       background-color: var(--primary-color);
+       width: 100%;
+       text-align: center;
+       transition: 0.3s;
+       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+       padding: 20px 0;
+       gap: 0;
+   }
+
+
+   .nav-menu.active {
+       left: 0;
+   }
+
+
+   .nav-menu a {
+       display: block;
+       padding: 15px 0;
+       transition: background-color 0.3s;
+   }
+
+
+   .nav-menu a:hover {
+       background-color: rgba(215, 204, 200, 0.1);
+   }
+
+
+   .hero-content h1 {
+       font-size: 2.2rem;
+   }
+
+   /* Адаптація меню: перетворення списку на картки */
+   .menu-container h1 {
+       font-size: 1.8rem;
+       margin-bottom: 30px;
+   }
+
+
+   .menu-section {
+       margin-bottom: 40px;
+   }
+
+
+   .menu-list {
+       grid-template-columns: 1fr;
+       gap: 15px 20px;
+   }
+
+
+   .menu-section h2 {
+       font-size: 1.4rem;
+       margin-bottom: 20px;
+       padding-bottom: 8px;
+   }
+
+
+   .menu-item {
+       flex-direction: column;
+       align-items: flex-start;
+       background: #fff;
+       border: 2px solid #eee;
+       padding: 20px;
+       border-radius: 12px;
+       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+       margin-bottom: 20px;
+       border-bottom: none;
+   }
+
+
+   .dots {
+       display: none;
+   }
+
+
+   
+
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+   .parallax{
+    background-image:url("nfs-laptope.png") ;
+   }
+    }
